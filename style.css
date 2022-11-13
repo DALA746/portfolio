@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic');
+:root {
+  --green: #99a799;
+  --dark_green: #99a799;
+  --light_grey: #fef5ed;
+}
 
 * {
   margin: 0;
@@ -15,9 +20,11 @@ p {
   line-height: 1.8;
 }
 
-.container {
-  width: 337px;
-  margin: 40px auto;
+.container,
+.container-header {
+  width: 100%;
+  max-width: 900px;
+  margin: 31px auto;
 }
 
 .hide {
@@ -29,17 +36,21 @@ a {
   color: black;
 }
 
+section {
+  padding: 15px;
+}
+
 .bold {
   font-weight: bold;
 }
 
 /* header */
 .header-section {
-  background-image: url(./img/bg-2.jpeg);
+  background-image: url(./img/forest.jpg);
   background-size: cover;
   padding: 20px;
   height: 300px;
-  background-position: bottom;
+  background-position: center;
 }
 
 /*icon header*/
@@ -68,13 +79,8 @@ a {
 }
 
 .circles-header:hover {
-  background-color: #0f500078;
-  transition: 1s ease-out;
-}
-
-.container-header {
-  width: 320px;
-  margin: 20px auto;
+  background-color: var(--green);
+  transition: 0.4s ease-out;
 }
 
 .profile-img-container {
@@ -84,10 +90,9 @@ a {
 
 .profile-image {
   position: absolute;
-  top: 212px;
-
-  width: 150px;
-  height: 150px;
+  top: 244px;
+  width: 106px;
+  height: auto;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid white;
@@ -109,8 +114,8 @@ a {
 }
 
 .portfolio-section:nth-child(2n) {
-  background-color: #ecececbc;
-  padding: 5px;
+  background-color: var(--light_grey);
+  padding: 15px;
 }
 
 .heading-container {
@@ -120,7 +125,7 @@ a {
 }
 
 .heading {
-  background-color: #2d561c;
+  background-color: var(--green);
   color: white;
   padding: 3px;
   text-transform: uppercase;
@@ -129,13 +134,14 @@ a {
 
 .image-container {
   position: relative;
+  background: var(--green);
 }
 
 /* profile text*/
 
 /* "lollypop" icon*/
 .line {
-  border: 1px solid #2d561c;
+  border: 1px solid var(--green);
   width: 40px;
   display: inline-block;
   margin-bottom: 4px;
@@ -144,7 +150,7 @@ a {
 .dot {
   height: 10px;
   width: 10px;
-  background-color: #2d561c;
+  background-color: var(--green);
   border-radius: 50%;
   display: inline-block;
   margin-left: -10px;
@@ -159,35 +165,42 @@ a {
 /*project and article section*/
 .cards-container {
   display: grid;
-  grid-auto-rows: auto;
-  margin: 30px auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 37px;
+  margin: 20px auto;
 }
 
 .card {
   width: 100%;
-  margin: 10px auto;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  height: 100%;
+  box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.03);
+  box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 40%);
 }
 
 .card-text {
-  margin: 10px auto;
-}
-
-.card-text:hover {
-  text-decoration: underline;
-  color: #2d561c;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  padding: 10px;
 }
 
 .arrow-link {
   font-weight: bold;
-  color: #2d561c;
+  color: var(--green);
   text-decoration: underline;
 }
 
 .tags {
   font-size: 16px;
-  background-color: #2d561c;
+  background-color: var(--green);
   color: white;
   padding: 6px;
   border-radius: 3px;
@@ -199,11 +212,20 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 3px;
+  padding: 10px;
+}
+
+.other-tags-container {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3px;
 }
 
 img {
   width: 100%;
-  height: 236px;
+  height: auto;
 }
 
 .image {
@@ -223,7 +245,7 @@ img {
 }
 
 .other-heading {
-  color: #2d561c;
+  color: var(--green);
   padding: 3px;
   text-transform: uppercase;
   font-size: 28px;
@@ -235,7 +257,7 @@ img {
 
 .content-container:hover {
   text-decoration: underline;
-  color: #2d561c;
+  color: var(--green);
 }
 
 .content-container h2 {
@@ -289,15 +311,15 @@ img {
 }
 
 .circles:hover {
-  background-color: #2d561c;
-  border-color: #2d561c;
-  transition: 1s ease-out;
+  background-color: var(--green);
+  border-color: var(--green);
+  transition: 0.4s ease-out;
 }
 
 /*footer */
 
 footer {
-  background-color: #2d561c;
+  background-color: var(--dark_green);
   padding: 50px;
 }
 
@@ -313,26 +335,16 @@ footer {
 
 /*MEDIA QUERIES*/
 
-/*iphone 4 and 5*/
-@media (min-width: 280px) and (max-width: 375px) {
-  .container-header {
-    width: 240px;
-    margin: 20px auto;
-  }
-
-  .container {
-    width: 240px;
-  }
-
+@media (min-width: 280px) and (max-width: 374px) {
   .icon-header {
     font-size: 30px;
     margin: 0;
   }
 
   .profile-image {
-    width: 130px;
-    height: 130px;
-    top: 234px;
+    width: 33%;
+    height: auto;
+    top: 250px;
   }
 
   .skills {
@@ -351,11 +363,6 @@ footer {
 
 /*ipad */
 @media (min-width: 768px) and (max-width: 992px) {
-  .container,
-  .container-header {
-    width: 626px;
-  }
-
   .icon {
     width: 65px;
   }
@@ -373,11 +380,6 @@ footer {
     font-size: 20px;
   }
 
-  .cards-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-  }
-
   .hide {
     display: block;
   }
@@ -387,25 +389,18 @@ footer {
   }
 }
 
-/*small screens and ipad pro*/
 @media (min-width: 993px) {
   .header-section {
     height: 400px;
   }
 
   .profile-image {
-    top: 269px;
-    width: 200px;
-    height: 200px;
+    top: 229px;
+    width: 230px;
   }
 
   .headings-container {
     font-size: 28px;
-  }
-
-  .container,
-  .container-header {
-    width: 812px;
   }
 
   .hide {
@@ -418,16 +413,6 @@ footer {
 
   .my-name-title {
     font-size: 20px;
-  }
-
-  .cards-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .card {
-    width: 47%;
   }
 
   .icon-bottom {

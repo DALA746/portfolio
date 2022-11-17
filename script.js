@@ -16,7 +16,7 @@ const projects = [
     name: 'Express Api',
     link: 'https://dl-shows-api.netlify.app/',
     description:
-      'First backend project where I have created an API using Express. This API have RESTful endpoints which return either an array ofdata, or a single item.',
+      'First backend project where I have created an API using Express. This API returns an array of data, or a single item',
     tags: ['API', 'Express.js', 'Backend'],
   },
   {

@@ -177,6 +177,9 @@ section {
 
   background-color: white;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card:hover {
@@ -207,7 +210,7 @@ section {
 }
 
 .tags-container {
-  margin: 10px auto;
+  margin: 10px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

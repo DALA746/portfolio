@@ -5,18 +5,18 @@ const otherContainer = document.getElementById('otherContainer');
 const projects = [
   {
     image: 'img/time.png',
-    name: 'Pomodoro App',
+    name: 'Movie App',
     link: 'https://final-project-pomodoro.netlify.app/',
     description:
-      ' A task-tracker based on the Pomodoro technique, a time management method that helps the user to stay focused while completing tasks.',
-    tags: ['React', 'Redux', 'React Router', 'Styled Componenets'],
+      'Pair-programming project using React Router, displaying lists of Top Rated Movies and more details when clicked on.',
+    tags: ['React', 'React Router'],
   },
   {
     image: 'img/api2.png',
     name: 'Express Api',
     link: 'https://dl-shows-api.netlify.app/',
     description:
-      ' I started my backend journey by creating an API using Express. This API have RESTful endpoints which return either an array ofdata, or a single item.',
+      'First backend project where I have created an API using Express. This API have RESTful endpoints which return either an array ofdata, or a single item.',
     tags: ['API', 'Express.js', 'Backend'],
   },
   {

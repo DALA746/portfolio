@@ -6,7 +6,7 @@ const projects = [
   {
     image: 'img/time.png',
     name: 'Movie App',
-    link: 'https://final-project-pomodoro.netlify.app/',
+    link: 'https://the-movie-db-project.netlify.app/',
     description:
       'Pair-programming project using React Router, displaying lists of Top Rated Movies and more details when clicked on.',
     tags: ['React', 'React Router'],

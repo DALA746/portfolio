@@ -4,7 +4,7 @@ const otherContainer = document.getElementById('otherContainer');
 
 const projects = [
   {
-    image: 'img/time.png',
+    image: 'img/movies.png',
     name: 'Movie App',
     link: 'https://the-movie-db-project.netlify.app/',
     description:
@@ -12,15 +12,7 @@ const projects = [
     tags: ['React', 'React Router'],
   },
   {
-    image: 'img/api2.png',
-    name: 'Express Api',
-    link: 'https://dl-shows-api.netlify.app/',
-    description:
-      'First backend project where I have created an API using Express. This API returns an array of data, or a single item',
-    tags: ['API', 'Express.js', 'Backend'],
-  },
-  {
-    image: 'img/To do list-amico.png',
+    image: 'img/todo.png',
     name: 'Todo App',
     link: 'https://todo-app-by-darya.netlify.app/',
     description:
@@ -28,12 +20,20 @@ const projects = [
     tags: ['React', 'Redux', 'Styled Components'],
   },
   {
-    image: 'img/happy2.png',
+    image: 'img/happy_thoughts.png',
     name: 'Happy Thoughts',
     link: 'https://happy-thoughts-react-project.netlify.app/',
     description:
       "For this project, I've been digging into React, and a deeper understanding of useEffect and useState.",
     tags: ['React', 'Redux'],
+  },
+  {
+    image: 'img/express_api.png',
+    name: 'Express Api',
+    link: 'https://dl-shows-api.netlify.app/',
+    description:
+      'First backend project where I have created an API using Express. This API returns an array of data, or a single item',
+    tags: ['API', 'Express.js', 'Backend'],
   },
 ];
 
@@ -46,17 +46,11 @@ const otherProjects = [
     tags: ['JSX', 'React', 'API'],
   },
   {
-    name: 'Survey App',
-    link: 'https://react-app-survey.netlify.app/',
-    description: 'A survey form using React hooks',
-    tags: ['JSX', 'React', 'Hooks'],
-  },
-  {
-    name: 'GitHub Tracker',
-    link: 'https://github-tracker-by-darya.netlify.app/',
+    name: 'Guess Who?',
+    link: 'https://guess-who-by-darya.netlify.app/',
     description:
-      'A GitHub-like page where you can track all of the projects which I will build at Technigos bootcamp.',
-    tags: ['JavaScript', 'Responsive Design', 'API'],
+      'My digital version of the old character guessing board game -> Guess Who? I enjoyed working on this project even when sometimes it was hard to deal with challenges. After all, I built my own game for the first time!',
+    tags: ['JavaScript', 'CSS', 'HTML'],
   },
 ];
 
@@ -98,7 +92,8 @@ projects.forEach((item) => {
   rel="noopener"
 >
   <div class="card">
-    <div class="image-container">
+    <div class="image-container" style="background-image: url('')">
+      <img src="${item.image}"/>
     </div>
     <div class="card-text">
       <h2>${item.name}</h2>
